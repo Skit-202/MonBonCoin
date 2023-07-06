@@ -1,6 +1,6 @@
 <?php
 // point d'entrée
-
+// public doit contenir tout les fichiers nécessaire à l'utilisateur
 use App\Routeur;
 
 $config = file_get_contents("../App/config.json");
@@ -15,8 +15,8 @@ define("ROOT", dirname(__DIR__));
 
 require_once(ROOT . DIRECTORY_SEPARATOR . "autoloader.php");
 
-echo "bienvenue sur le site";
-echo "<hr>";
+//echo "bienvenue sur le site";
+//echo "<hr>";
 
 $routeur = new Routeur;
 $routeur->app();

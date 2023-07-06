@@ -1,0 +1,2 @@
+les modèles sont des transcriptions de la base de données.
+dans la plupart des cas il doit y avoir autant de modèles que de tables dans la database. ils doivent contenir tout les requêtes sql nécessaire au fonctionnement de l'application. 

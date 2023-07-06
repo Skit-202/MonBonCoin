@@ -4,7 +4,7 @@ namespace App;
 
 use PDO;
 use PDOException;
-
+//cette classe nous permet de se connecter à la base de données
 class Db{
     private static $db;
 

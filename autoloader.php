@@ -1,5 +1,5 @@
 <?php
-
+//l'autoloader permet d'automatiser le require des classes nécessaire à l'application
 class Autoload
 {
     public static function inclusionAuto($className)

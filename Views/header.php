@@ -17,16 +17,18 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="<?= SITEBASE ?>">Mon bon Coin</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Toute les annonces</a>
+          <a class="nav-link" href="annonces">Toute les annonces</a>
         </li>
         <li class="nav-item">
           <a class="nav-link disabled">Disabled</a>
         </li>
       </ul>
-      
+      <ul class="navbar-nav ml-auto">
+        <li><a href="connexion" class="btn btn-primary">connexion</a></li>
+      </ul>
     </div>
   </div>
 </nav>
