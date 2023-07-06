@@ -1,13 +1,15 @@
 <?php
 
 namespace Controllers;
-//les controllers servent à dialoguer avec la base de données par l'intermédiaire des modèles et envoyer les resultats dans la bonne view
+
 class MainController
 {
     // Méthode pour envoyer à la bonne vue
     public static function render($views, $data = [])
     {
+        // $data = ['title' => 'connexion'];
         extract($data);
+        // $title = 'connexion';
         // On met en memoire tampon
         ob_start();
 
@@ -19,9 +21,18 @@ class MainController
         require_once ROOT . '/Views/layout.php';
     }
 
+    // Méthode de sécurisation des saisies de formulaire
+    public static function security(){
+        if(!empty($_POST)){
+            foreach($_POST as $key => $value){
+                $_POST['key'] = htmlspecialchars(trim($value));
+            }
+        }
+    }
+
 
     // pour tester
-    public static function test(){
-        self::render('annonces/annonces',['titre'=>'toutes les annonces', 'annonces' => 'voici les données']);
-    }
+    // public static function test(){
+    //     self::render('annonces/annonces',['titre'=>'toutes les annonces', 'annonces' => 'voici les données']);
+    // }
 }

@@ -35,14 +35,14 @@ require_once("autoloader.php");
 
 var_dump($userLogin);
 
-*/$pass = password_hash("1234", PASSWORD_BCRYPT);/*
+*/$pass = password_hash("1234", PASSWORD_DEFAULT);/*
 $data = ["test@gmail.com", $pass, "prenomTest", "nomTest", "mon adresse", 75011, "paris","06666666"];
 $newUser = UsersModel::create($data);*/
 
-$data = ["test@gmail.com", $pass, "prenomTest", "nomTest", "rue de paris", 75011,"Marseille", "065548181", 4];
+$data = ["admin@gmail.com", $pass, "prenomTest", "nomTest", "rue de paris", 75011,"Marseille", "065548181", 1];
 
 $userUpdate = UsersModel::update($data);
-var_dump($data);
+//var_dump($data);
 
 //UsersModel::Delete([5]);
 
@@ -55,19 +55,21 @@ $limit = "LIMIT 1";
 //var_dump($annonces);
 
 $annonce = AnnoncesModel::findById([1]);
-var_dump($annonce);
+//var_dump($annonce);
 
 echo "<br><br>";
 $annonces = AnnoncesModel::findByUser([3]);
 
-var_dump($annonces);
+//var_dump($annonces);
 
 $order = "price ASC";
 $annonceVehicule = AnnoncesModel::findByIdCat([3],$order);
-var_dump($annonceVehicule);
+// var_dump($annonceVehicule);
 
 /*$data = [3,19, "iphone XXI", "128Go vert", 600, "img/iphone.jpg"];
 AnnoncesModel::create($data);*/
+
+
 
 $data = [3,19, "iphone XXI", "128Go vert", 600, "img/iphone.jpg", 1];
 AnnoncesModel::update($data);
